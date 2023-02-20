@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Geometry Genius</title>
+    <!-- FontAwesome Kit -->
+    <script
+      src="https://kit.fontawesome.com/c90f151b5f.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- daisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Tailwind CDN Link-->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <section
+        class="container my-6 px-3 md:px-12 lg:px-12 py-6 flex justify-between items-center bg-blue-200 mx-auto"
+      >
+        <div class="left-content">
+          <h2 class="text-3xl font-bold">Blog Page</h2>
+          <h3 class="text-3xl font-medium text-gray-700">
+            Question and Answer
+          </h3>
+        </div>
+        <div class="right-content">
+          <button
+            id="calculator"
+            class="px-6 py-2 bg-blue-500 rounded-lg text-white font-semibold"
+          >
+            Area Calculator
+          </button>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section
+        class="container my-6 px-3 md:px-6 lg:px-6 py-6 flex justify-between bg-slate-100 mx-auto"
+      >
+        <div class="qna-area">
+          <div
+            class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box"
+          >
+            <input type="checkbox" />
+            <div class="collapse-title text-xl font-medium">
+              1. What is DOM and what is the purpose of DOM?
+            </div>
+            <div class="collapse-content">
+              <p>
+                HTML ফাইল হচ্ছে একটি Document. যখন HTML document ব্রাউজারে লোড
+                হয়, তখন এটি document object হয়ে যায়। জাভাস্ক্রিপ্ট এই Document
+                এর একটি Object Model তৈরি করে। আমরা ডট নোটেশনের মাধ্যমে প্রতিটি
+                নোডে একসেস করতে পারি। যেমন- document.body HTML ফাইল এর মধ্যে
+                যতগুলো ট্যাগ আছে, জাভাস্ক্রিপ্ট সব ট্যাগকে Node হিসেবে বিবেচনা
+                করে একটি Tree তৈরি করে নেয়। যাকে Document Object Model বলা হয়।
+              </p>
+              <p>
+                DOM Methods দ্বারা আমরা JavaScript দিয়ে HTML elements গুলোকে
+                manipulate (add, create, delete, remove, modify etc.) করতে পারি।
+              </p>
+            </div>
+          </div>
+          <div
+            class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box"
+          >
+            <input type="checkbox" />
+            <div class="collapse-title text-xl font-medium">
+              2. How will you select HTML elements using DOM? Name the DOM
+              methods.
+            </div>
+            <div class="collapse-content">
+              <p>
+                DOM দিয়ে HTML ফাইল এর কোন element কে ট্যাগের নাম, ক্লাসের নাম,
+                আইডি ব্যবহার করে ধরতে পারি। নিম্নে কিছু মেথডের নাম দেয়া হলো।
+              </p>
+              <ul>
+                <li>getElementById()</li>
+                <li>getElementsByClassName()</li>
+                <li>getElementsByTagName()</li>
+                <li>querySelector()</li>
+                <li>querySelectorAll()</li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box"
+          >
+            <input type="checkbox" />
+            <div class="collapse-title text-xl font-medium">
+              3. What is event bubble?
+            </div>
+            <div class="collapse-content">
+              <p>
+                HTML ফাইলের কোন ইলিমেন্টে ক্লিক করলে, রুট ইলিমেন্ট থেকে শুরু করে
+                সর্বনিম্ন লেভেল পর্যন্ত (উপর থেকে নিচে যেখানে ক্লিক করা হয়েছে)
+                event খুঁজতে থাকে, যাকে Capturing Phase-1 বলে। <br>
+                তারপর যেখানে ক্লিক করা হয়েছে তারমধ্যে কোন event থাকলে ঐ ইলিমেন্টকে trigger করে, তাকে Target Phase 2 বলে। <br>
+                তারপর উপরের দিকে যেতে যেতে খুঁজতে থাকে আর কোন event আছে কি না? কোন event পাওয়া গেলে trigger করে দেয়, তাকে Bubbling Phase 3 বলে। 
+                
+              </p>
+            </div>
+          </div>
+          <div
+            class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box"
+          >
+            <input type="checkbox" />
+            <div class="collapse-title text-xl font-medium">
+              4. What is a callback function and why will you use it?
+            </div>
+            <div class="collapse-content">
+              <p>
+                যখন কোন ফাংশনের আর্গুমেন্ট হিসেবে আরেকটি ফাংশন পাঠানো হয়, তখন মূল ফাংশনটি এক্সিকিউট হওয়ার পর এ ফাংশনটি এক্সিকিউট হয়, তখন আর্গুমেন্ট পাঠানো ঐ ফাংশনটিকে callback function বলে।
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+        document.getElementById('calculator').addEventListener('click', function(){
+            location.href = 'index.html'
+        })
+    </script>
+  </body>
+</html>
